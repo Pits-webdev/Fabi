@@ -1,0 +1,74 @@
+---
+import Sun from "../assets/icons/sun.svg";
+import Moon from "../assets/icons/moon.svg";
+import Link from "./ui/Link.astro";
+---
+
+<nav
+   class="w-full h-16 flex items-center justify-start gap-6 px-10 bg-white-light dark:bg-black-light rounded-2xl"
+>
+   <div class="flex items-center gap-8">
+      <Link path="/" name="Home" styles="h-[24px]" />
+
+      <Link path="/work" name="Work" styles="h-[24px]" />
+
+      <Link path="/blog" name="Blog" styles="h-[24px]" />
+   </div>
+
+   <!-- <a
+      href="/work"
+      class="inline-flex px-4 py-1.5 border rounded-lg border-white-accent hover:bg-white-accent dark:border-black-accent dark:hover:bg-black-accent"
+      >Work</a
+   > -->
+
+   <button
+      aria-label="switch Theme"
+      id="themeBtn"
+      type="button"
+      class="ml-auto flex items-center gap-1 cursor-pointer p-2 border rounded-lg border-white-accent hover:bg-white-accent dark:border-black-accent dark:hover:bg-black-accent"
+   >
+      <Sun id="sun" class="hidden" width={18} height={18} />
+      <Moon id="moon" width={18} height={18} />
+   </button>
+</nav>
+
+<script is:inline>
+   const themeBtn = document.getElementById("themeBtn");
+   const sun = document.getElementById("sun");
+   const moon = document.getElementById("moon");
+
+   function handleStorage() {
+      if (localStorage.getItem("theme") === "dark") {
+         document.documentElement.classList.add("dark");
+      }
+      handleIcons();
+   }
+
+   function toggleTheme() {
+      themeBtn?.addEventListener("click", () => {
+         console.log("hi");
+         document.documentElement.classList.toggle("dark");
+
+         if (localStorage.getItem("theme") === "dark") {
+            localStorage.setItem("theme", "");
+         } else {
+            localStorage.setItem("theme", "dark");
+         }
+
+         handleIcons();
+      });
+   }
+
+   function handleIcons() {
+      if (localStorage.getItem("theme") === "dark") {
+         moon?.classList.add("hidden");
+         sun?.classList.remove("hidden");
+      } else {
+         moon?.classList.remove("hidden");
+         sun?.classList.add("hidden");
+      }
+   }
+
+   handleStorage();
+   toggleTheme();
+</script>

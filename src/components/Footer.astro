@@ -1,0 +1,47 @@
+---
+import LogoSvg from "../assets/icons/LogoSvg.svg";
+import Email from "../assets/icons/email.svg";
+import Link from "./ui/Link.astro";
+---
+
+<footer
+   class="w-full h-full bg-black-light text-white dark:bg-white-light dark:text-black rounded-[1.25rem] p-16"
+>
+   <div class="flex justify-between">
+      <div class="flex items-center gap-5">
+         <div class="flex">
+            <LogoSvg width={24} height={24} />
+            <h2 class="text-xl font-bold">Messmer Photography</h2>
+         </div>
+      </div>
+
+      <p class="flex items-center gap-2">
+         <Email width={16} height={16} /> fabian.messmer@email.com
+      </p>
+   </div>
+
+   <div class="flex justify-between mt-14">
+      <div class="flex flex-col gap-4">
+         <h3 class="mb-2 font-bold text-lg">Pages</h3>
+         <Link path="/" name="Home" styles="h-[24px]" />
+         <Link path="/work" name="Work" styles="h-[24px]" />
+         <Link path="/blog" name="Block" styles="h-[24px]" />
+      </div>
+      <div class="flex flex-col gap-4">
+         <h3 class="mb-2 font-bold text-lg">Rechtliches</h3>
+         <Link path="/rechtliches/impressum" name="Impressum" styles="h-[24px]" />
+         <Link path="/rechtliches/datenschutz" name="Datenschutz" styles="h-[24px]" />
+      </div>
+      <div class="flex flex-col gap-4">
+         <h3 class="mb-2 font-bold text-lg">Socials</h3>
+         <Link path="/" name="Instagram" styles="h-[24px]" />
+         <Link path="/" name="Facebook" styles="h-[24px]" />
+      </div>
+   </div>
+
+   <div class="w-full h-full mt-8 flex items-center justify-between text-sm">
+      <p>Copyright @ Fabian Messmer 2025</p>
+
+      <p>Build by peter webdev | Salem</p>
+   </div>
+</footer>

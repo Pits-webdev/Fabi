@@ -1,0 +1,31 @@
+<svg
+            width="38.636"
+            height="19"
+            viewBox="0 0 38.636 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+         >
+            <g transform="translate(0.5 0.5)">
+               <g transform="translate(9.487 5.882)">
+                  <path
+                     d="M9.53674e-07 2.54026C9.53674e-07 2.54026 4.61535 0 9.40433 0C14.1933 0 19.1559 2.54026 19.1559 2.54026L19.1559 11.125L0 11.125L9.53674e-07 2.54026Z"
+                  ></path>
+                  <path
+                     d="M9.40433 0C4.61535 0 9.53674e-07 2.54026 9.53674e-07 2.54026L0 10.125L0 11.125L19.1559 11.125L19.1559 10.125L19.1559 2.54026C19.1559 2.54026 14.1933 0 9.40433 0ZM18.1559 3.15945Q13.6912 1 9.40433 1Q5.13938 1 1 3.13999L1 10.125L18.1559 10.125L18.1559 3.15945Z"
+                     fill="currentColor"
+                     fill-rule="evenodd"></path>
+               </g>
+               <path
+                  d="M1.43494 0L1.43494 7.56475L0 12.1183L3.4279 12.1183L2.23213 7.56475L2.23213 0.293777L1.43494 0Z"
+                  fill="none"
+                  stroke-width="1"
+                  stroke="currentColor"
+                  transform="translate(0 5.882)"></path>
+               <path
+                  d="M8.93808 8.74105L0 5.58456L18.1222 0L36.9003 5.58456L27.9623 8.74105"
+                  fill="none"
+                  stroke-width="1"
+                  stroke="currentColor"
+                  transform="translate(0.736 0)"></path>
+            </g>
+         </svg>
