@@ -5,9 +5,18 @@ import LogoSvg from "../assets/icons/LogoSvg.svg";
 <div
    class="h-10 absolute top-3 bg-white dark:bg-black px-6 rounded-br-[1.25rem] flex items-center"
 >
-   <a href="/" class="relative inline-flex text-lg items-center justify-center">
-      <LogoSvg width={18} height={18} />Messmer Photography</a
+   <a
+      href="/"
+      class="relative inline-flex text-lg items-center justify-center group overflow-hidden"
    >
+      <LogoSvg width={18} height={18} />
+      <div
+         class="h-[28px] flex flex-col group-hover:-translate-y-[28px] transition-transform duration-300 ease-[cubic-bezier(0.95,0.05,0.795,0.035)]"
+      >
+         <span>Messmer Photography</span>
+         <span>Messmer Photography</span>
+      </div>
+   </a>
 
    <!-- half rounded icon top-->
    <svg

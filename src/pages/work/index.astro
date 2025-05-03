@@ -14,7 +14,7 @@ import Footer from "../../components/Footer.astro";
             class="h-full grid grid-rows-[calc(100vh-64px-(3*12px))_64px] gap-3"
          >
             <!--sticky Hero Image -->
-            <div class="w-full h-full">
+            <div class="title_image w-full h-full">
                <Logo />
                <ImageComponente
                   imagePath="/src/assets/Paris_model_1.jpg"
@@ -47,7 +47,7 @@ import Footer from "../../components/Footer.astro";
          </div>
 
          <!--scroll image Gallery -->
-         <div class="grid grid-cols-3 gap-3">
+         <div class="gallery grid grid-cols-3 gap-3">
             <a href="/work/paris" class="w-full h-fit flex flex-col gap-3">
                <ImageComponente
                   imagePath="/src/assets/Paris_model_1.jpg"
@@ -78,10 +78,7 @@ import Footer from "../../components/Footer.astro";
                </div>
             </a>
 
-            <a
-               href="/work/paris"
-               class="w-full h-fit flex flex-col gap-3"
-            >
+            <a href="/work/paris" class="w-full h-fit flex flex-col gap-3">
                <ImageComponente
                   imagePath="/src/assets/Paris_model_3.jpg"
                   altText="A headshot of Priya against a brick wall background."
@@ -170,10 +167,7 @@ import Footer from "../../components/Footer.astro";
                </div>
             </a>
 
-            <a
-               href="/work/paris"
-               class="w-full h-fit flex flex-col gap-3"
-            >
+            <a href="/work/paris" class="w-full h-fit flex flex-col gap-3">
                <ImageComponente
                   imagePath="/src/assets/Paris_model_3.jpg"
                   altText="A headshot of Priya against a brick wall background."
@@ -238,3 +232,20 @@ import Footer from "../../components/Footer.astro";
       </div>
    </div>
 </Layout>
+
+<script>
+   const titleImage = document.querySelector(".title_image [data-image]");
+   const images = document.querySelectorAll(".gallery [data-image]");
+
+   images.forEach((image) => {
+      image.addEventListener("mouseover", function () {
+         const hoverPath = image.getAttribute("src");
+
+         if (titleImage?.getAttribute("src") === hoverPath) return;
+
+         if (hoverPath) {
+            titleImage?.setAttribute("src", hoverPath);
+         }
+      });
+   });
+</script>
